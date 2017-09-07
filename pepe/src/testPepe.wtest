@@ -1,0 +1,41 @@
+
+import pepe.*
+import gerente.*
+import cadete.*
+import bonoPresentismo.*
+import desempenio.*
+
+
+
+ test "test pepe como cadete, bono fijo de 80 y bono por faltas sueldo igual a 1580"
+  {
+pepe.cambiarPuesto(cadete)
+pepe.desempenio(desempenioMedio)
+pepe.tipoBonoPresentismo(bonoPresentismo)
+pepe.faltar()
+pepe.faltar()
+	assert.equals( 1580,pepe.sueldo())
+
+ }
+ 
+  test "test pepe como gerente, bono resultado porcentaje y bono presentismo independiente sueldo igual a 1100"
+  {
+pepe.cambiarPuesto(gerente)
+pepe.desempenio(desempenioEsperado)
+pepe.tipoBonoPresentismo(bonoPresentismoNulo)
+pepe.faltar()
+
+	assert.equals( 1100,pepe.sueldo())
+
+ }
+ 
+  test "test pepe como gerente, bono resultado porcentaje y bono presentismo por faltas sueldo igual a 1150"
+  {
+pepe.cambiarPuesto(gerente)
+pepe.desempenio(desempenioEsperado)
+pepe.tipoBonoPresentismo(bonoPresentismo)
+pepe.faltar()
+
+	assert.equals( 1150,pepe.sueldo())
+
+ }
