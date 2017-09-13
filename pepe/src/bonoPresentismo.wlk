@@ -12,6 +12,7 @@ method calcularBono(unaPersona){
 
 object bonoPresentismoNulo {
 	
+	
 method calcularBono(unaPersona){
   return 0
 }
