@@ -6,7 +6,7 @@ import desempenio.*
 object pepe {
 
 var puesto
-var inacistencias=0
+var inacistencias=4
 var tipoBonoPresentismo
 var desempenio
 
